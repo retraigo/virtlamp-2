@@ -36,7 +36,7 @@
         <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '360px' }"
           src="/kolam_better-modified.webp" />
       </div>
-      <img class="w-36 h-36 absolute pointer-events-none z-50" :src="`/bettermatch/${currentDaro}.png`"
+      <img class="w-36 h-36 fixed pointer-events-none z-50" :src="`/bettermatch/${currentDaro}.png`"
         :style="{ 'top': yco - 40 + 'px', 'left': xco + 'px' }" />
     </div>
   </div>
