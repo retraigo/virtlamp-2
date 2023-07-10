@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col items-center space-y-0.5 font-monsterrat bg-gradient-to-r from-blue-800 to-cyan-500 p-8">
+    <img src = "srm.webp" class="w-48 fixed top-4 left-4" alt="SRM Trichy"/>
     <div class="font-semibold text-xl text-white font-montserrat uppercase">
       SRM Institute of Science & Technology (Tiruchirapalli Campus)
     </div>
@@ -7,6 +8,7 @@
       Department of Computer Science & Engineering
     </div>
     <div class="text-white">Proudly Welcomes You All To</div>
+    <div class="text-white font-semibold">Inaugural Ceremony Of</div>
     <div
       class="font-montserrat font-bold text-yellow-200 transition transform duration-500 ease-in-out hover:scale-110 text-2xl">
       21 Days Online International Faculty Development Program on
@@ -25,19 +27,22 @@
           ${buttons[light.name]
               ? 'block'
               : 'hidden'
-            }`" :style="{ 'top': `${light.y + 30}px`, 'left': `${light.x + 20}px`, 'width': '50px', 'height': '50px' }"
+            }`" :style="{ 'top': `${light.y + 50}px`, 'left': `${light.x + 30}px`, 'width': '30px', 'height': '30px' }"
             :src="`/brighterflame/${images[light.name]}.png`" />
-          <button class="absolute bg-white border-red-700 border rounded-full z-30"
+          <button :class="`${buttons[light.name]
+            ? 'hidden'
+            : 'block'
+            } absolute bg-white border-red-700 border rounded-full z-30`"
             :style="{ 'top': `${light.y + 70}px`, 'left': `${light.x + 40}px`, 'width': '10px', 'height': '10px' }"
             @click="x => lightUp(light.name)"></button>
         </div>
-        <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '60px' }"
+        <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '0px' }"
           src="/lamp_better_y.webp" />
-        <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '360px' }"
+        <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '300px' }"
           src="/kolam_better-modified.webp" />
       </div>
-      <img class="w-36 h-36 fixed pointer-events-none z-50" :src="`/bettermatch/${currentDaro}.png`"
-        :style="{ 'top': yco - 50 + 'px', 'left': xco + 'px' }" />
+      <img class="w-36 h-36 fixed pointer-events-none z-50 text-center" :src="`/bettermatch/${currentDaro}.png`"
+        :style="{ 'top': yco - 10 + 'px', 'left': xco + 'px' }" />
     </div>
   </div>
 </template>
@@ -74,11 +79,11 @@ export default {
   methods: {
     refreshLights() {
       this.lights = [
-        { x: document.body.scrollWidth / 2 - 100, y: 80, name: 'one' },
-        { x: document.body.scrollWidth / 2 - 150, y: 130, name: 'two' },
-        { x: document.body.scrollWidth / 2 + 60, y: 130, name: 'three' },
-        { x: document.body.scrollWidth / 2 + 20, y: 80, name: 'four' },
-        { x: document.body.scrollWidth / 2 - 60, y: 160, name: 'five' },
+        { x: document.body.scrollWidth / 2 - 100, y: 20, name: 'one' },
+        { x: document.body.scrollWidth / 2 - 150, y: 70, name: 'two' },
+        { x: document.body.scrollWidth / 2 + 60, y: 70, name: 'three' },
+        { x: document.body.scrollWidth / 2 + 20, y: 20, name: 'four' },
+        { x: document.body.scrollWidth / 2 - 60, y: 100, name: 'five' },
       ]
     },
     lightUp(num) {
