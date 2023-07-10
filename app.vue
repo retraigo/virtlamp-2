@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center space-y-0.5 font-monsterrat bg-gradient-to-r from-blue-800 to-cyan-500 p-8">
-    <img src = "srm.webp" class="w-48 fixed top-4 left-4" alt="SRM Trichy"/>
+    <img src = "/srm.webp" class="w-48 fixed top-4 left-4" alt="SRM Trichy"/>
     <div class="font-semibold text-xl text-white font-montserrat uppercase">
       SRM Institute of Science & Technology (Tiruchirapalli Campus)
     </div>
