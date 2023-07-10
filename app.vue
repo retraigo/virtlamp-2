@@ -37,7 +37,7 @@
           src="/kolam_better-modified.webp" />
       </div>
       <img class="w-36 h-36 fixed pointer-events-none z-50" :src="`/bettermatch/${currentDaro}.png`"
-        :style="{ 'top': yco - 40 + 'px', 'left': xco + 'px' }" />
+        :style="{ 'top': yco - 50 + 'px', 'left': xco + 'px' }" />
     </div>
   </div>
 </template>
