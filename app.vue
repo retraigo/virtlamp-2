@@ -4,8 +4,11 @@
       class="flex flex-col items-center space-y-0.5 font-monsterrat bg-gradient-to-r from-blue-800 to-cyan-500 p-8 relative">
       <img src="/srm.webp" class="w-48 absolute top-4 left-4" alt="SRM Trichy" />
       <div class="font-semibold text-xl text-white font-montserrat uppercase">
-        SRM Institute of Science & Technology (Tiruchirapalli Campus)
+        SRM Institute of Science & Technology
       </div>
+      <div class="font-black uppercase text-lg tracking-wider">AI, Deep Learning, and Machine Learning for
+        Tiruchirappalli Campus</div>
+
       <div class="font-montserrat font-bold text-2xl text-white uppercase">
         Department of Computer Science & Engineering
       </div>
@@ -30,7 +33,8 @@
           ${buttons[light.name]
                 ? 'block'
                 : 'hidden'
-              }`" :style="{ 'top': `${light.y + 50}px`, 'left': `${light.x + 30}px`, 'width': '30px', 'height': '30px' }"
+              }`"
+              :style="{ 'top': `${light.y + 50}px`, 'left': `${light.x + 30}px`, 'width': '30px', 'height': '30px' }"
               :src="`/brighterflame/${images[light.name]}.png`" />
             <button :class="`${buttons[light.name]
               ? 'hidden'
