@@ -6,7 +6,7 @@
       <div class="font-semibold text-xl text-white font-montserrat uppercase">
         SRM Institute of Science & Technology
       </div>
-      <div class="font-black uppercase text-lg tracking-wider">AI, Deep Learning, and Machine Learning for
+      <div class="font-black uppercase text-lg tracking-wider text-white">
         Tiruchirappalli Campus</div>
 
       <div class="font-montserrat font-bold text-2xl text-white uppercase">
