@@ -1,26 +1,12 @@
 <template>
   <div class="w-full max-h-screen overflow-y-hidden">
     <div
-      class="flex flex-col items-center space-y-0.5 font-monsterrat bg-gradient-to-r from-blue-800 to-cyan-500 p-8 relative">
-      <img src="/srm.webp" class="w-48 absolute top-4 left-4" alt="SRM Trichy" />
-      <div class="font-semibold text-xl text-white font-montserrat uppercase">
-        SRM Institute of Science & Technology
-      </div>
-      <div class="font-black uppercase text-lg tracking-wider text-white">
-        Tiruchirappalli Campus</div>
-
-      <div class="font-montserrat font-bold text-2xl text-white uppercase">
-        Department of Computer Science & Engineering
-      </div>
-      <div class="text-white">Proudly Welcomes You All To</div>
-      <div class="text-white font-semibold">Inaugural Ceremony Of</div>
-      <div
-        class="font-montserrat font-bold text-yellow-200 transition transform duration-500 ease-in-out hover:scale-110 text-2xl">
-        15 Days Online STTP on Empowering the Future:
-      </div>
-      <div class="font-black uppercase text-lg tracking-wider text-yellow-200">AI, Deep Learning, and Machine Learning for
-        Innovation and Transformation</div>
-      <div class="text-white font-montserrat font-semibold text-2xl">24/07/2023 - 09/08/2023</div>
+      class="flex flex-col items-center space-y-0.5 font-monsterrat p-8 relative">
+      <img src="/SRM_TRP.png" class="w-48 mx-auto" alt="SRM Trichy" />
+      <div class="text-black">Proudly Welcomes You All To</div>
+      <div class="text-black font-semibold">The Inaugural Ceremony Of</div>
+      <img src="/SRM_Innov.png" class="w-72 mx-auto" />
+      <div class="font-black uppercase text-lg tracking-wider text-sky-900 font-serif font-bold">Innovate for Progress, Build for Tomorrow!</div>
     </div>
     <div class="p-4 h-screen relative overflow-hidden" @touchmove="movedarotouch" @mousemove="movedaro">
       <div class="w-full">
