@@ -90,6 +90,7 @@ export default {
     },
     lightUp(num) {
       if (!this.buttons[num]) setInterval(() => this.changeButton(num), 50)
+      this.images[num] = 1
       this.buttons[num] = true
     },
     changeButton(num) {
