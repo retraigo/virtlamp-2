@@ -1,19 +1,22 @@
 <template>
   <div class="w-full max-h-screen overflow-y-hidden">
     <div
-      class="flex flex-col items-center space-y-0.5 font-monsterrat p-8 relative">
+      class="flex flex-col items-center space-y-0.5 font-monsterrat px-8 py-2 relative">
       <img src="/SRM_TRP.png" class="w-48 mx-auto" alt="SRM Trichy" />
+      <div class="text-xl text-sky-900 font-montserrat uppercase font-black">
+        SRM Group of Institutions
+      </div>
+      <div class="font-bold uppercase text-lg tracking-wider text-sky-900">
+        Tiruchirappalli</div>
       <div class="text-black">Proudly Welcomes You All To</div>
       <div class="text-black font-semibold">The Inaugural Ceremony Of</div>
       <img src="/SRM_Innov.png" class="w-72 mx-auto" />
       <div class="font-black uppercase text-lg tracking-wider text-sky-900 font-serif font-bold">Innovate for Progress, Build for Tomorrow!</div>
+      <div class="text-black font-montserrat font-semibold text-lg">08/02/2024</div>
     </div>
     <div class="p-4 h-screen relative overflow-hidden" @touchmove="movedarotouch" @mousemove="movedaro">
       <div class="w-full">
         <div class="mx-auto flex flex-col items-center justify-center">
-          <div class="p-2 flex flex-col items-center text-center">
-            <HomePage />
-          </div>
           <div v-for="light in lights" :key="light.name" class="w-full">
             <img :class="`absolute z-40 top-0
           ${buttons[light.name]
