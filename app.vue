@@ -91,11 +91,11 @@ export default {
         { x: -20, y: 120, name: 'three' },
         { x: 20, y: 70, name: 'four' },
         { x: 65, y: 150, name: 'five' },
-        { x: document.body.scrollWidth - 100 - 130, y: 70, name: 'one' },
-        { x: document.body.scrollWidth - 100 - 160, y: 120, name: 'two' },
-        { x: document.body.scrollWidth - 100 + 20, y: 120, name: 'three' },
-        { x: document.body.scrollWidth - 100 - 20, y: 70, name: 'four' },
-        { x: document.body.scrollWidth - 190, y: 150, name: 'five' },
+        { x: document.body.scrollWidth - 100 - 130, y: 70, name: 'six' },
+        { x: document.body.scrollWidth - 100 - 160, y: 120, name: 'seven' },
+        { x: document.body.scrollWidth - 100 + 20, y: 120, name: 'eight' },
+        { x: document.body.scrollWidth - 100 - 20, y: 70, name: 'nine' },
+        { x: document.body.scrollWidth - 190, y: 150, name: 'ten' },
       ]
     },
     lightUp(num) {
@@ -107,7 +107,7 @@ export default {
       this.images[num] = this.images[num] === 5 ? 2 : this.images[num] + 1
     },
     changeButtons() {
-      for (const i of [1, 2, 3, 4, 5]) {
+      for (const i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
         this.changeButton(i)
       }
     },
