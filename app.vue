@@ -1,19 +1,19 @@
 <template>
   <div class="w-full max-h-screen overflow-y-hidden">
-    <div class="flex flex-col items-center space-y-0.5 font-monsterrat px-8 py-2 relative">
-      <img src="/SRM_TRP.png" class="w-48 absolute top-0 left-0" alt="SRM Trichy" />
-      <div class="text-2xl text-sky-900 font-montserrat uppercase font-black">
-        SRM Group of Institutions
-      </div>
-      <div class="font-bold uppercase text-lg tracking-wider text-sky-900">
-        Tiruchirappalli</div>
-      <div class="flex gap-1">
-        <div class="text-red-900 font-semibold">Proudly Welcomes You All To The Inaugural Ceremony Of</div>
-      </div>
-      <img src="/SRM_Innov.webp" class="w-72 mx-auto" />
-      <div class="text-green-900 font-montserrat font-semibold text-lg">08 - 02 - 2024</div>
-    </div>
     <div class="p-4 h-screen relative overflow-hidden" @touchmove="movedarotouch" @mousemove="movedaro">
+      <div class="flex flex-col items-center space-y-0.5 font-monsterrat px-8 py-2 relative mt-16">
+        <img src="/SRM_TRP.png" class="w-48" alt="SRM Trichy" />
+        <div class="text-2xl text-sky-900 font-montserrat uppercase font-black">
+          SRM Group of Institutions
+        </div>
+        <div class="font-bold uppercase text-lg tracking-wider text-sky-900">
+          Tiruchirappalli</div>
+        <div class="flex gap-1">
+          <div class="text-red-900 font-semibold">Proudly Welcomes You All To The Inaugural Ceremony Of</div>
+        </div>
+        <img src="/SRM_Innov.webp" class="w-72 mx-auto" />
+        <div class="text-green-900 font-montserrat font-semibold text-lg">08 - 02 - 2024</div>
+      </div>
       <div class="w-full">
         <div class="mx-auto flex flex-col items-center justify-center">
           <div v-for="light in lights" :key="light.name" class="w-full">
@@ -31,9 +31,14 @@
               :style="{ 'top': `${light.y + 70}px`, 'left': `${light.x + 40}px`, 'width': '10px', 'height': '10px' }"
               @click="x => lightUp(light.name)"></button>
           </div>
-          <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '0px' }"
+          <img class="flex-shrink-0 absolute z-20 left-0" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '50px' }"
             src="/lamp_better_y_center.webp" />
-          <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '300px' }"
+            <img class="flex-shrink-0 absolute z-20 right-0" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '50px' }"
+            src="/lamp_better_y_center.webp" />
+
+          <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '350px', left: '-480px' }"
+            src="/kolam_better-modified.webp" />
+            <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '350px', right: '-480px' }"
             src="/kolam_better-modified.webp" />
         </div>
         <img class="w-36 h-36 fixed pointer-events-none z-50 text-center" :src="`/bettermatch/${currentDaro}.png`"
@@ -81,11 +86,16 @@ export default {
   methods: {
     refreshLights() {
       this.lights = [
-        { x: document.body.scrollWidth / 2 - 110, y: 20, name: 'one' },
-        { x: document.body.scrollWidth / 2 - 160, y: 70, name: 'two' },
-        { x: document.body.scrollWidth / 2 + 50, y: 70, name: 'three' },
-        { x: document.body.scrollWidth / 2 + 10, y: 20, name: 'four' },
-        { x: document.body.scrollWidth / 2 - 70, y: 100, name: 'five' },
+        { x: 130, y: 70, name: 'one' },
+        { x: 160, y: 120, name: 'two' },
+        { x: -20, y: 120, name: 'three' },
+        { x: 20, y: 70, name: 'four' },
+        { x: 65, y: 150, name: 'five' },
+        { x: document.body.scrollWidth - 100 - 130, y: 70, name: 'one' },
+        { x: document.body.scrollWidth - 100 - 160, y: 120, name: 'two' },
+        { x: document.body.scrollWidth - 100 + 20, y: 120, name: 'three' },
+        { x: document.body.scrollWidth - 100 - 20, y: 70, name: 'four' },
+        { x: document.body.scrollWidth - 190, y: 150, name: 'five' },
       ]
     },
     lightUp(num) {
