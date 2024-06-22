@@ -1,27 +1,19 @@
 <template>
   <div class="w-full max-h-screen overflow-y-hidden">
-    <div class="flex flex-col items-center space-y-0.5 font-monsterrat px-8 py-2 relative">
-      <img src="/srm.png" class="w-72 absolute top-0 left-0" alt="SRM Trichy" />
-      <div class="text-2xl text-sky-900 font-montserrat uppercase font-black">
-        SRM Institute Of Science & Technology
-      </div>
-      <div class="font-bold text-lg tracking-wider text-sky-900">
-        (Deemed to be University u/s 3 of UGC Act, 1956)</div>
-        <div class="font-bold text-lg tracking-wider text-sky-900">
-          Tiruchirappalli - 621105, Tamil Nadu, India</div>
-      <div class="flex gap-1">
-        <div class="text-red-900 font-semibold">Organises</div>
-      </div>
-      <div
-        class="font-montserrat font-bold text-red-400 text-2xl">
-        Faculty Induction/Orientation Programme 2024
-      </div>
-      <div
-        class="font-montserrat font-bold text-red-400 text-xl">
-        (24.06.2024 - 09.07.2024)
-      </div>
-    </div>
     <div class="p-4 h-screen relative overflow-hidden" @touchmove="movedarotouch" @mousemove="movedaro">
+      <div class="flex flex-col items-center space-y-0.5 font-monsterrat px-8 py-2 relative mt-16">
+        <img src="/SRM_TRP.png" class="w-48" alt="SRM Trichy" />
+        <div class="text-2xl text-sky-900 font-montserrat uppercase font-black">
+          SRM Group of Institutions
+        </div>
+        <div class="font-bold uppercase text-lg tracking-wider text-sky-900">
+          Tiruchirappalli</div>
+        <div class="flex gap-1">
+          <div class="text-red-900 font-semibold">Proudly Welcomes You All To The Inaugural Ceremony Of</div>
+        </div>
+        <img src="/SRM_Innov.webp" class="w-72 mx-auto" />
+        <div class="text-green-900 font-montserrat font-semibold text-lg">08 - 02 - 2024</div>
+      </div>
       <div class="w-full">
         <div class="mx-auto flex flex-col items-center justify-center">
           <div v-for="light in lights" :key="light.name" class="w-full">
@@ -39,9 +31,14 @@
               :style="{ 'top': `${light.y + 70}px`, 'left': `${light.x + 40}px`, 'width': '10px', 'height': '10px' }"
               @click="x => lightUp(light.name)"></button>
           </div>
-          <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '0px' }"
+          <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '50px', left: '50px' }"
             src="/lamp_better_y_center.webp" />
-          <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '300px' }"
+            <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '50px', right: '50px' }"
+            src="/lamp_better_y_center.webp" />
+
+          <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '350px', left: '-430px' }"
+            src="/kolam_better-modified.webp" />
+            <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '350px', right: '-430px' }"
             src="/kolam_better-modified.webp" />
         </div>
         <img class="w-36 h-36 fixed pointer-events-none z-50 text-center" :src="`/bettermatch/${currentDaro}.png`"
@@ -89,11 +86,16 @@ export default {
   methods: {
     refreshLights() {
       this.lights = [
-        { x: document.body.scrollWidth / 2 - 110, y: 20, name: 'one' },
-        { x: document.body.scrollWidth / 2 - 160, y: 70, name: 'two' },
-        { x: document.body.scrollWidth / 2 + 50, y: 70, name: 'three' },
-        { x: document.body.scrollWidth / 2 + 10, y: 20, name: 'four' },
-        { x: document.body.scrollWidth / 2 - 70, y: 100, name: 'five' },
+        { x: 180, y: 70, name: 'one' },
+        { x: 210, y: 120, name: 'two' },
+        { x: 30, y: 120, name: 'three' },
+        { x: 60, y: 70, name: 'four' },
+        { x: 115, y: 150, name: 'five' },
+        { x: document.body.scrollWidth - 280, y: 70, name: 'six' },
+        { x: document.body.scrollWidth - 310, y: 120, name: 'seven' },
+        { x: document.body.scrollWidth - 130, y: 120, name: 'eight' },
+        { x: document.body.scrollWidth - 170, y: 70, name: 'nine' },
+        { x: document.body.scrollWidth - 235, y: 150, name: 'ten' },
       ]
     },
     lightUp(num) {
@@ -105,7 +107,7 @@ export default {
       this.images[num] = this.images[num] === 5 ? 2 : this.images[num] + 1
     },
     changeButtons() {
-      for (const i of [1, 2, 3, 4, 5]) {
+      for (const i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
         this.changeButton(i)
       }
     },
