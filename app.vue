@@ -5,8 +5,6 @@
       <div class="text-2xl text-sky-900 font-montserrat uppercase font-black">
         SRM Institute Of Science & Technology
       </div>
-      <div class="font-bold text-lg tracking-wider text-sky-900">
-        (Deemed to be University u/s 3 of UGC Act, 1956)</div>
         <div class="font-bold text-lg tracking-wider text-sky-900">
           Tiruchirappalli - 621105, Tamil Nadu, India</div>
       <div class="flex gap-1">
