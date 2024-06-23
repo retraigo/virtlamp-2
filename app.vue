@@ -14,14 +14,14 @@
       </div>
       <div
         class="font-montserrat font-bold text-red-400 text-2xl">
-        Faculty Induction/Orientation Programme 2024
+        Faculty Induction Programme 2024
       </div>
       <div
         class="font-montserrat font-bold text-red-400 text-xl">
         (24.06.2024 - 09.07.2024)
       </div>
     </div>
-    <div class="p-4 h-screen relative overflow-hidden" @touchmove="movedarotouch" @mousemove="movedaro">
+    <div class="p-4 h-screen relative overflow-visible" @touchmove="movedarotouch" @mousemove="movedaro">
       <div class="w-full">
         <div class="mx-auto flex flex-col items-center justify-center">
           <div v-for="light in lights" :key="light.name" class="w-full">
@@ -39,9 +39,9 @@
               :style="{ 'top': `${light.y + 70}px`, 'left': `${light.x + 40}px`, 'width': '10px', 'height': '10px' }"
               @click="x => lightUp(light.name)"></button>
           </div>
-          <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '15.6rem', 'height': '40.5rem', 'top': '0px' }"
+          <img class="flex-shrink-0 absolute z-20" :style="{ 'width': '11.7rem', 'height': '30.4rem', 'top': '0px' }"
             src="/lamp_better_y_center.webp" />
-          <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '75rem', 'height': '45.5rem', 'top': '300px' }"
+          <img class="flex-shrink-0 absolute z-10" :style="{ 'width': '56.25rem', 'height': '36.125rem', 'top': '200px' }"
             src="/kolam_better-modified.webp" />
         </div>
         <img class="w-36 h-36 fixed pointer-events-none z-50 text-center" :src="`/bettermatch/${currentDaro}.png`"
@@ -89,11 +89,11 @@ export default {
   methods: {
     refreshLights() {
       this.lights = [
-        { x: document.body.scrollWidth / 2 - 110, y: 20, name: 'one' },
-        { x: document.body.scrollWidth / 2 - 160, y: 70, name: 'two' },
-        { x: document.body.scrollWidth / 2 + 50, y: 70, name: 'three' },
-        { x: document.body.scrollWidth / 2 + 10, y: 20, name: 'four' },
-        { x: document.body.scrollWidth / 2 - 70, y: 100, name: 'five' },
+        { x: document.body.scrollWidth / 2 - 90, y: 0, name: 'one' },
+        { x: document.body.scrollWidth / 2 - 120, y: 35, name: 'two' },
+        { x: document.body.scrollWidth / 2 + 20, y: 35, name: 'three' },
+        { x: document.body.scrollWidth / 2, y: 0, name: 'four' },
+        { x: document.body.scrollWidth / 2 - 55, y: 60, name: 'five' },
       ]
     },
     lightUp(num) {
